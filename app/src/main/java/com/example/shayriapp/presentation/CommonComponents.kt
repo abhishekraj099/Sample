@@ -1,7 +1,6 @@
 package com.hello.shayriapp.presentation
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -26,7 +25,7 @@ import androidx.compose.ui.unit.sp
 import com.example.shayriapp.R
 import com.example.shayriapp.ui.theme.primaryLight
 
-import com.hello.shayriapp.model.ShayriModel
+import com.hello.shayriapp.model.HanumanModel
 
 
 @Composable
@@ -52,7 +51,7 @@ fun MainToolbar(title: String, onClick: () -> Unit) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_back),
                     contentDescription = null,
-                    tint = Color.White
+                    tint = Color.Black
                 )
             }
         }
@@ -60,14 +59,14 @@ fun MainToolbar(title: String, onClick: () -> Unit) {
         Text(
             text = title, style = TextStyle(
                 fontSize = 24.sp, fontWeight = FontWeight.Bold
-            ), color = Color.White, modifier = Modifier.padding(start = 25.dp)
+            ), color = Color.Black, modifier = Modifier.padding(start = 25.dp)
         )
     }
 }
 
-fun getList(): List<ShayriModel> {
+fun getList(): List<HanumanModel> {
     val shayriData = listOf(
-        ShayriModel(
+        HanumanModel(
             "Hanuman Chalisa", listOf(
                 """
                 श्रीगुरु चरन सरोज रज, निज मनु मुकुरु सुधारि।
@@ -200,71 +199,209 @@ fun getList(): List<ShayriModel> {
                 """.trimIndent()
             )
         ),
-        ShayriModel(
-            "Ramayana", listOf(
+        HanumanModel(
+            "Hanuman Chalisa (English)", listOf(
                 """
-                श्रीरामचरितमानस के बालकाण्ड से:
-                श्रीगुरु चरन सरोज रज, निज मनु मुकुरु सुधारि।
-                बरनऊँ रघुबर बिमल जसु, जो दायकु फल चारि॥
-                बुद्धिहीन तनु जानिके, सुमिरौं पवन-कुमार।
-                बल बुधि विद्या देहु मोहिं, हरहु कलेस बिकार॥
-                
-                नानापुराण निगमागम समम्तं, यद् रामायणे निगदितं क्वचिदन्यतोऽपि।
-                स्वान्तः सुखाय तुलसी रघुनाथ गाथा, भाषानिबन्धमतिरुचिरमुपारराम॥
-                
-                रामायण के अयोध्याकाण्ड से:
-                तपः स्वाध्याय निरतं, तपस्वी वाग्विदां वरम्।
-                नारदं परिपप्रच्छ वाल्मीकिर्मुनिपुङ्गवम्॥
+Sri Guru Charan Saroj Raj Nij Man Mukur Sudhari, Baranau Raghuvar Bimal Jasu Jo Dayaku Ohal Chari II
+
+Buddhiheen Tanu Janike Sumarau Pavan Kumar, Bal Buddhi Vidya Dehu Mohi Harau Kalesh Vikar II
+
+Jai Hanuman gyan gun sagar
+Jai Kapis tihun lok ujagar
+
+Ram doot atulit bal dhama
+Anjaani putra Pavan sut nama
+
+Mahabir Bikram Bajrangi
+Kumati nivar sumati ke sangi
+
+Kanchan varan viraj subesa
+Kanan kundal kunchit kesa
+
+Hath vajra aur dhvaja viraje
+Kaandhe moonj janeyu saje
+
+Shankar suvan kesri nandan
+Tej pratap maha jag vandan
+
+Vidyavan guni ati chatur
+Ram kaj karibe ko aatur
+
+Prabu charitra sunibe ko rasiya
+Ram Lakhan Sita man basiya
+
+Sukshma roop dhari siyahi dikhava
+Vikat roop dhari lank jarava
+
+Bhima roop dhari asur sanghare
+Ramachandra ke kaj sanvare
+
+Laye Sanjivan Lakhan jiyaye
+Shri Raghuvir harashi ur laye
+
+Raghupati kinhi bahut badai
+Tum mam priye Bharat hi sam bhai
+
+Sahas badan tumharo yash gaave
+Asa kahi Shripati kanth lagaave
+
+Sankadhik Brahmadi Muneesa
+Narad Saarad sahit Aheesa
+
+Yam Kuber Digpaal jahan te
+Kavi Kovid kahi sake kahan te
+
+Tum upkar Sugreevahin keenha
+Ram milaye rajpad deenha
+
+Tumharo mantra Vibheeshan maana
+Lankeshwar bhaye sab jag jana
+
+Yug sahastra jojan par Bhanu
+Leelyo tahi madhur phal janu
+
+Prabhu mudrika meli mukh mahee
+Jaladhi langhi gaye achraj nahee
+
+Durgam kaj jagath ke jete
+Sugam anugraha tumhre tete
+
+Ram dwaare tum rakhvare
+Hoat na agya binu paisare
+
+Sub sukh lahae tumhari sar na
+Tum rakshak kahu ko dar naa
+
+Aapan tej samharo aapai
+Teenhon lok hank te kanpai
+
+Bhoot pisaach nikat nahin aavai
+Mahavir jab naam sunave
+
+Nase rog harae sab peera
+Japat nirantar Hanumant beera
+
+Sankat te Hanuman chudavae
+Man kram vachan dhyan jo lavai
+
+Sab par Ram tapasvee raja
+Tin ke kaj sakal Tum saja
+
+Aur manorath jo koi lavai
+Soi amit jeevan phal pavai
+
+Charon jug partap tumhara
+Hai persidh jagat ujiyara
+
+Sadhu Sant ke tum rakhware
+Asur nikandan Ram dulhare
+
+Ashta sidhi nav nidhi ke dhata
+As var deen Janki mata
+
+Ram rasayan tumhare pasa
+Sada raho Raghupati ke dasa
+
+Tumhare bhajan Ram ko pavai
+Janam janam ke dukh bisraavai
+
+Anth kaal Raghuvir pur jayee
+Jahan janam Hari Bakht Kahayee
+
+Aur Devta chit na dharahi
+Hanumanth sehi sarve sukh karehi
+
+Sankat kate mite sab peera
+Jo sumirai Hanumat balbeera
+
+Jai Jai Jai Hanuman Gosayin
+Kripa karahu Gurudev ki nyahin
+
+Jo sat bar path kare kohi
+Chutahi bandhi maha sukh hohi
+
+Jo yah padhe Hanuman Chalisa
+Hoye siddhi sakhi Gaurisa
+
+Tulsidas sada hari chera
+Keejai nath hridaye mein dera
+
+Pavan tanay sankat harana, Mangal moorati roop I
+Ram Lakhan Sita sahit, Hridaya basahu sur bhoop II
                 """.trimIndent()
             )
         ),
-        ShayriModel(
-            "Bhagavad Gita", listOf(
+        HanumanModel(
+            "Lord Hanuman Vandana", listOf(
                 """
-                ध्यायतो विषयान्पुंसः, सङ्गस्तेषूपजायते।
-                सङ्गात्सञ्जायते कामः, कामात्क्रोधोऽभिजायते॥
-                क्रोधाद्भवति सम्मोहः, सम्मोहात्स्मृतिविभ्रमः।
-                स्मृतिभ्रंशाद् बुद्धिनाशो, बुद्धिनाशात्प्रणश्यति॥
+चरण शरण में आयी के,
+धरुं तिहारा ध्यान॥
+संकट से रक्षा करो,
+संकट से रक्षा करो,
+पवन पुत्र हनुमान॥
 
-                ब्रह्मार्पणं ब्रह्म हविः, ब्रह्माग्नौ ब्रह्मणा हुतम्।
-                ब्रह्मैव तेन गन्तव्यं, ब्रह्मकर्मसमाधिना॥
+दुर्मम काज बनाय के,
+कीन्हे भक्त निहाल॥
+अब मोरी विनती सुनो,
+अब मोरी विनती सुनो,
+हे अंजनी के लाल॥
 
-                श्री भगवानुवाच:
-                कर्मण्येवाधिकारस्ते, मा फलेषु कदाचन।
-                मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥
+हाथ जोड़ विनती करूँ,
+सुनो वीर हनुमान॥
+कष्टों से रक्षा करो,
+कष्टों से रक्षा करो,
+राम भक्ति देहूं दान
+पवनपुत्र हनुमान॥ 
                 """.trimIndent()
             )
         ),
-        ShayriModel(
-            "Bhagavata Purana", listOf(
+        HanumanModel(
+            "Lord Hanuman Arti", listOf(
                 """
-                जनमाद्यस्य यतोऽन्वयादितरतः, चार्थेष्वभिज्ञः स्वरत।
-                तेने ब्रह्म हृदा य आदिकवये, मुह्यन्ति यत्सूरयः॥
-                तेजोवारिमृदां यथा विनिमयो, यत्र त्रिसर्गोऽमृषा।
-                धाम्ना स्वेन सदा निरस्तकुहकं, सत्यं परं धीमहि॥
+आरती कीजै हनुमान लला की ।
+दुष्ट दलन रघुनाथ कला की ॥
 
-                धर्मः प्रोज्झितकैतवोऽत्र परमो, निर्मत्सराणां सतां।
-                वेद्यं वास्तवमत्र वस्तु शिवदं, तापत्रयोन्मूलनम्॥
+जाके बल से गिरवर काँपे ।
+रोग-दोष जाके निकट न झाँके ॥
+अंजनि पुत्र महा बलदाई ।
+संतन के प्रभु सदा सहाई ॥
+आरती कीजै हनुमान लला की ॥
+
+दे वीरा रघुनाथ पठाए ।
+लंका जारि सिया सुधि लाये ॥
+लंका सो कोट समुद्र सी खाई ।
+जात पवनसुत बार न लाई ॥
+आरती कीजै हनुमान लला की ॥
+
+लंका जारि असुर संहारे ।
+सियाराम जी के काज सँवारे ॥
+लक्ष्मण मुर्छित पड़े सकारे ।
+लाये संजिवन प्राण उबारे ॥
+आरती कीजै हनुमान लला की ॥
+
+पैठि पताल तोरि जमकारे ।
+अहिरावण की भुजा उखारे ॥
+बाईं भुजा असुर दल मारे ।
+दाहिने भुजा संतजन तारे ॥
+आरती कीजै हनुमान लला की ॥
+
+सुर-नर-मुनि जन आरती उतरें ।
+जय जय जय हनुमान उचारें ॥
+कंचन थार कपूर लौ छाई ।
+आरती करत अंजना माई ॥
+आरती कीजै हनुमान लला की ॥
+
+जो हनुमानजी की आरती गावे ।
+बसहिं बैकुंठ परम पद पावे ॥
+लंक विध्वंस किये रघुराई ।
+तुलसीदास स्वामी कीर्ति गाई ॥
+
+आरती कीजै हनुमान लला की ।
+दुष्ट दलन रघुनाथ कला की ॥
                 """.trimIndent()
             )
         ),
-        ShayriModel(
-            "Vedas", listOf(
-                """
-                अग्निमीळे पुरोहितं यज्ञस्य देवमृत्विजम्।
-                होतारं रत्नधातमम्॥
 
-                किशोरः सगणो वीरः, सर्वत्रान्वेषणं कविः।
-                प्रसूतिं चाप विश्वान्यर्यो विष्वग्वी स्वर्षाट्॥
-
-                इन्द्रं वर्धन्तो अप्तुरः, कृण्वन्तो विश्वमार्यम्।
-                अविश्वासः सत्रासहा, सुवीरासो नृद्र्ष्टमः॥
-
-                आपो हि ष्ठा मयोभुवस्ता न ऊर्जे दधातन।
-                महेरणाय चक्षसे॥
-                """.trimIndent()
-            )
-        )
     )
     return shayriData
 }

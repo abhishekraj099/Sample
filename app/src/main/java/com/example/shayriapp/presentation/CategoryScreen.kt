@@ -66,6 +66,7 @@ fun CategoryScreen(navHostController: NavHostController) {
                                         navHostController.navigate(ShayriRoutingItems.ShayriListScreenItem.route + "/${item.title.toString()}")
                                     },
                                 colors = CardDefaults.cardColors(
+//                                    Color change
                                     containerColor = primaryLight
                                 )
                             ) {
@@ -77,7 +78,7 @@ fun CategoryScreen(navHostController: NavHostController) {
                                         text = item.title.toString(),
                                         style = TextStyle(
                                             fontWeight = FontWeight.Bold,
-                                            fontSize = 18.sp, color = Color.White
+                                            fontSize = 18.sp, color = Color.Black
                                         )
                                     )
                                 }

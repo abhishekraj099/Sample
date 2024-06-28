@@ -12,7 +12,6 @@ val Pink40 = Color(0xFF7D5260)
 
 
 
-val primaryLight = Color(0xC9FFAB3B)
+val primaryLight = Color(0xC9DACFBF)
 val primaryText = Color(0xA9FF9A3B)
-val primaryColor = Color(0xFFFF792E)
-val orangeColor = Color(0xFFFF6A00)
+val primaryColor = Color(0xFFF3E7D5)
