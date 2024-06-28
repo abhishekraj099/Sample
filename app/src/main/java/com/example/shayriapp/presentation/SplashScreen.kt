@@ -12,12 +12,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.shayriapp.R
+import com.example.shayriapp.ui.theme.orangeColor
 import com.example.shayriapp.ui.theme.primaryColor
-import com.example.shayriapp.ui.theme.purpleColor
 
 import com.hello.shayriapp.routing.ShayriRoutingItems
 
@@ -50,7 +51,7 @@ fun SplashScreen(navHostController: NavHostController) {
                 CircularProgressIndicator(
                     modifier = Modifier.size(40.dp),
                     strokeWidth = 5.dp,
-                    color = purpleColor
+                    color = Color.White
                 )
             }
         }

@@ -14,6 +14,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -41,51 +42,53 @@ fun CategoryScreen(navHostController: NavHostController) {
         // Exit the app
         (context as? android.app.Activity)?.finish()
     }
+    Scaffold{
+        Surface(modifier = Modifier.padding(it)) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(primaryColor)
+            ) {
+                Column {
+                    MainToolbar(title = "Category") {
+                        (context as? android.app.Activity)?.finish()
+                    }
 
-    Surface {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(primaryColor)
-        ) {
-            Column {
-                MainToolbar(title = "Category") {
-                    (context as? android.app.Activity)?.finish()
-                }
-
-                LazyColumn {
-                    items(getList()) { item ->
-                        Card(
-                            shape = RoundedCornerShape(15.dp),
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(85.dp)
-                                .padding(10.dp)
-                                .clickable {
-                                    navHostController.navigate(ShayriRoutingItems.ShayriListScreenItem.route + "/${item.title.toString()}")
-                                },
-                            colors = CardDefaults.cardColors(
-                                containerColor = primaryLight
-                            )
-                        ) {
-                            Box(
-                                modifier = Modifier.fillMaxSize(),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Text(
-                                    text = item.title.toString(),
-                                    style = TextStyle(
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = 18.sp, color = Color.White
-                                    )
+                    LazyColumn {
+                        items(getList()) { item ->
+                            Card(
+                                shape = RoundedCornerShape(15.dp),
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(85.dp)
+                                    .padding(10.dp)
+                                    .clickable {
+                                        navHostController.navigate(ShayriRoutingItems.ShayriListScreenItem.route + "/${item.title.toString()}")
+                                    },
+                                colors = CardDefaults.cardColors(
+                                    containerColor = primaryLight
                                 )
+                            ) {
+                                Box(
+                                    modifier = Modifier.fillMaxSize(),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = item.title.toString(),
+                                        style = TextStyle(
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 18.sp, color = Color.White
+                                        )
+                                    )
+                                }
                             }
                         }
                     }
                 }
+
+
             }
-
-
         }
     }
+
 }
