@@ -28,7 +28,7 @@ The Contact Application offers an intuitive and user-friendly interface for mana
 
 ## 📸 Screenshots
 
-| ![Screenshot 1](https://github.com/user-attachments/assets/5648a3c9-1ddc-45bb-be24-7fba43013318) | ![Screenshot 2](https://github.com/user-attachments/assets/aaf53119-bca8-4243-af2f-d5bbf5c3ec3f) | ![Screenshot 3](https://github.com/user-attachments/assets/7ebecd67-0e18-4b6b-b968-4f1d8f43d404) | ![Screenshot 4](https://github.com/user-attachments/assets/b5163932-586e-45ca-92d2-258a46acdf60) | ![Screenshot 5](https://github.com/user-attachments/assets/b1dab399-d123-4426-8cc0-8303276eaf33) | ![Screenshot 6](https://github.com/user-attachments/assets/d30600b0-a579-4f97-871a-b4731b0e6aac) |
+ ![Screenshot 1](https://github.com/user-attachments/assets/5648a3c9-1ddc-45bb-be24-7fba43013318)  ![Screenshot 2](https://github.com/user-attachments/assets/aaf53119-bca8-4243-af2f-d5bbf5c3ec3f)  ![Screenshot 3](https://github.com/user-attachments/assets/7ebecd67-0e18-4b6b-b968-4f1d8f43d404)  ![Screenshot 4](https://github.com/user-attachments/assets/b5163932-586e-45ca-92d2-258a46acdf60)  ![Screenshot 5](https://github.com/user-attachments/assets/b1dab399-d123-4426-8cc0-8303276eaf33)  ![Screenshot 6](https://github.com/user-attachments/assets/d30600b0-a579-4f97-871a-b4731b0e6aac) 
 
 ## 🛠️ Built With
 - [Kotlin](https://kotlinlang.org/) - Programming Language
